@@ -8,7 +8,8 @@ inputElement.addEventListener('keydown', (e) => {
 })
 
 function addTask() {
-    if (inputElement.value === '') {
+    const inputValue = inputElement.value.trim();
+    if (inputValue === '') {
         alert('You must write something!');
     } else {
         const liElement = document.createElement('li');
@@ -19,7 +20,7 @@ function addTask() {
         liElement.appendChild(spanElement);
     }
     inputElement.value = '';
-    saveData()
+    saveData();
 }
 
 
